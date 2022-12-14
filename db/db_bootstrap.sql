@@ -58,7 +58,6 @@ CREATE TABLE bank_account (
   client integer,
   balance integer,
   billing_state varchar(30),
-  billing_city varchar(50),
   billing_address varchar(50),
   FOREIGN KEY (client) REFERENCES client(client_id)
 );
@@ -107,7 +106,7 @@ CREATE TABLE support_request (
 );
 
 CREATE TABLE trade (
-    trade_id integer PRIMARY KEY,
+    trade_id integer PRIMARY KEY auto_increment,
     port_traded integer,
     traded_by integer,
     sec_traded varchar(6),
@@ -220,13 +219,13 @@ insert into support_request (ticket_number, requested_by, rep, details, resolved
 insert into support_request (ticket_number, requested_by, rep, details, resolved, request_date) values (9, 9, 9, 'phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut', false, '2022-08-17');
 insert into support_request (ticket_number, requested_by, rep, details, resolved, request_date) values (10, 10, 10, 'sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat', false, '2022-03-18');
 
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (1, 1, 1, 'TTF', 40, 359.84);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (2, 2, 2, 'JW.A', 84, 84.45);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (3, 3, 3, 'NCA', 2, 473.22);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (4, 4, 4, 'FMCIR', 41, 459.6);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (5, 5, 5, 'DL', 25, 205.77);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (6, 6, 6, 'HMST', 100, 69.97);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (7, 7, 7, 'CNBKA', 5, 401.38);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (8, 8, 8, 'STKL', 92, 124.73);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (9, 9, 9, 'SB', 98, 375.69);
-insert into trade (trade_id, traded_by, port_traded, sec_traded, quantity, price) values (10, 10, 10, 'CLRB', 92, 146.18);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 1, 1, 'TTF', 40, 359.84);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 2, 2, 'JW.A', 84, 84.45);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 3, 3, 'NCA', 2, 473.22);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 4, 4, 'FMCIR', 41, 459.6);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 5, 5, 'DL', 25, 205.77);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 6, 6, 'HMST', 100, 69.97);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 7, 7, 'CNBKA', 5, 401.38);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 8, 8, 'STKL', 92, 124.73);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 9, 9, 'SB', 98, 375.69);
+insert into trade (traded_by, port_traded, sec_traded, quantity, price) values ( 10, 10, 'CLRB', 92, 146.18);

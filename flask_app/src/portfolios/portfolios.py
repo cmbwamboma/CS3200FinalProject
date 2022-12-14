@@ -33,7 +33,7 @@ def get_security_details():
     current_app.logger.info(request.args)
     cursor = db.get_db().cursor()
     ticker = request.args['ticker']
-    query = 'SELECT i.industry_name, i.sector, s.ticker, s.name, s.price, s.beta FROM holding h ' \
+    query = 'SELECT DISTINCT i.industry_name, i.sector, s.ticker, s.name, s.price, s.beta FROM holding h ' \
             'JOIN security s ON h.sec = s.ticker JOIN industry i ON s.industry = i.industry_id WHERE s.ticker = "{}"'.format(ticker)
     cursor.execute(query)
     row_headers = [x[0] for x in cursor.description]
