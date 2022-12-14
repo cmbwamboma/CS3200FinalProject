@@ -30,6 +30,47 @@ USE `classicmodels`;
 grant all privileges on classicmodels.* to 'webapp'@'%';
 flush privileges;
 
+
+CREATE TABLE client (
+    client_id integer PRIMARY KEY,
+    username varchar(20) UNIQUE,
+    pass varchar(20),
+    first_name varchar(20) NOT NULL,
+    last_name varchar(30) NOT NULL,
+    email varchar(30) NOT NULL,
+    phone_number varchar(12),
+    portfolio integer,
+    social_security varchar(10),
+    mailing_state varchar(30),
+    mailing_city varchar(40),
+    mailing_address varchar(50)
+);
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (1, 'grobyns0', '139EUE', 'Gabby', 'Robyns', 'grobyns0@feedburner.com', '713-239-4677', 1, '0898833469', 'Texas', 'Houston', '38867 Barby Trail');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (2, 'bmechan1', 'N3HufvW', 'Brigg', 'Mechan', 'bmechan1@prnewswire.com', '510-840-3027', 2, '9386054922', 'California', 'Richmond', '42465 Fordem Alley');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (3, 'cnaile2', 'YTQxxRm4uLYk', 'Carson', 'Naile', 'cnaile2@nature.com', '417-693-3628', 3, '4622305089', 'Missouri', 'Springfield', '462 Calypso Crossing');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (4, 'blestrange3', 'nTUqVv7vL542', 'Brendis', 'Lestrange', 'blestrange3@shop-pro.jp', '915-680-4645', 4, '8992812817', 'Texas', 'El Paso', '930 Waxwing Pass');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (5, 'ccrecy4', '4pbzhtNDXrkH', 'Collen', 'Crecy', 'ccrecy4@livejournal.com', '619-817-3790', 5, '9086475507', 'California', 'San Diego', '217 Schmedeman Terrace');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (6, 'ascarsbrick5', 'o1Kd1R', 'Aubree', 'Scarsbrick', 'ascarsbrick5@bloomberg.com', '503-988-4598', 6, '3505331139', 'Oregon', 'Portland', '4316 Shelley Lane');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (7, 'rscranney6', 'HerVvg8xNB', 'Rosabelle', 'Scranney', 'rscranney6@cargocollective.com', '202-154-6967', 7, '0703755897', 'District of Columbia', 'Washington', '1 Maple Drive');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (8, 'llagen7', '70aMZoN', 'Lulu', 'Lagen', 'llagen7@bluehost.com', '360-735-9506', 8, '5770063130', 'Washington', 'Olympia', '085 Oneill Circle');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (9, 'kdebernardi8', 'oPlcVywe', 'Koo', 'De Bernardi', 'kdebernardi8@cyberchimps.com', '912-474-7849', 9, '5710809535', 'Georgia', 'Savannah', '0 John Wall Avenue');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (10, 'equail9', 'EOBE1B', 'Eugen', 'Quail', 'equail9@blogtalkradio.com', '570-618-0339', 10, '7365859806', 'Pennsylvania', 'Scranton', '3885 Eastwood Trail');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (11, 'gwondrascheka', 'sBDfy6Tuc4A', 'Grace', 'Wondraschek', 'gwondrascheka@sakura.ne.jp', '248-217-1069', 11, '3852512034', 'Michigan', 'Troy', '174 Shoshone Trail');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (12, 'mlackhamb', '8NR9mUGre5', 'Mercedes', 'Lackham', 'mlackhamb@networksolutions.com', '832-384-3125', 12, '4765696022', 'Texas', 'Houston', '0 Kipling Avenue');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (13, 'cloveringc', '4XYiNrBUxYId', 'Carlin', 'Lovering', 'cloveringc@amazon.co.jp', '915-110-4307', 13, '6336596079', 'Texas', 'El Paso', '5864 Hollow Ridge Crossing');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (14, 'wcornelissed', 's7rAbarmbfv', 'Wendy', 'Cornelisse', 'wcornelissed@google.com.hk', '415-225-3587', 14, '3696633151', 'California', 'San Rafael', '2058 6th Terrace');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (15, 'tcavnore', 'p2I1ZO', 'Trix', 'Cavnor', 'tcavnore@istockphoto.com', '248-399-8481', 15, '6729325577', 'Michigan', 'Detroit', '53 Dakota Road');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (16, 'mscramagef', 'pdVMazJhWJpf', 'Monika', 'Scramage', 'mscramagef@amazon.com', '813-283-9691', 16, '9060214102', 'Florida', 'Tampa', '79 Briar Crest Pass');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (17, 'ffeehelyg', 'vlUuGM', 'Franky', 'Feehely', 'ffeehelyg@myspace.com', '325-606-4694', 17, '5960432862', 'Texas', 'San Angelo', '87591 Lighthouse Bay Alley');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (18, 'oleflochh', 'Xuw4kWpMpU', 'Orella', 'Le Floch', 'oleflochh@nymag.com', '253-434-8958', 18, '3163490298', 'Washington', 'Olympia', '83 Nelson Pass');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (19, 'gtidburyi', 'hC4R1neiRS', 'Gusti', 'Tidbury', 'gtidburyi@cisco.com', '301-765-5820', 19, '4207976930', 'Maryland', 'Bethesda', '8179 Blackbird Circle');
+insert into client (client_id, username, pass, first_name, last_name, email, phone_number, portfolio, social_security, mailing_state, mailing_city, mailing_address) values (20, 'bbarrabealej', 'dlls2D9GEtL4', 'Brooke', 'Barrabeale', 'bbarrabealej@goo.gl', '206-583-5171', 20, '7270975558', 'Washington', 'Seattle', '17786 Killdeer Alley');
+
+
+
+
+
+
 /*Table structure for table `customers` */
 
 DROP TABLE IF EXISTS `customers`;
@@ -7683,6 +7724,8 @@ insert  into `productlines`(`productLine`,`textDescription`,`htmlDescription`,`i
 ('Trucks and Buses','The Truck and Bus models are realistic replicas of buses and specialized trucks produced from the early 1920s to present. The models range in size from 1:12 to 1:50 scale and include numerous limited edition and several out-of-production vehicles. Materials used include tin, diecast and plastic. All models include a certificate of authenticity from their manufacturers and are a perfect ornament for the home and office.',NULL,NULL),
 
 ('Vintage Cars','Our Vintage Car models realistically portray automobiles produced from the early 1900s through the 1940s. Materials used include Bakelite, diecast, plastic and wood. Most of the replicas are in the 1:18 and 1:24 scale sizes, which provide the optimum in detail and accuracy. Prices range from $30.00 up to $180.00 for some special limited edition replicas. All models include a certificate of authenticity from their manufacturers and come fully assembled and ready for display in the home or office.',NULL,NULL);
+
+
 
 /*Table structure for table `products` */
 

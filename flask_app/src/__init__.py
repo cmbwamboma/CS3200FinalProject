@@ -6,6 +6,7 @@ from flaskext.mysql import MySQL
 # create a MySQL object that we will use in other parts of the API
 db = MySQL()
 
+
 def create_app():
     app = Flask(__name__)
     
@@ -19,19 +20,20 @@ def create_app():
     app.config['MYSQL_DATABASE_PASSWORD'] = open('/secrets/db_password.txt').readline()
     app.config['MYSQL_DATABASE_HOST'] = 'db'
     app.config['MYSQL_DATABASE_PORT'] = 3306
-    app.config['MYSQL_DATABASE_DB'] = 'classicmodels'  # Change this to your DB name
+    app.config['MYSQL_DATABASE_DB'] = 'wealth_management'  # Change this to your DB name
 
     # Initialize the database object with the settings above. 
     db.init_app(app)
     
     # Import the various routes
-    from src.views import views
-    from src.customers.customers import customers
-    from src.products.products  import products
+
+    from src.clients.clients import clients
+    from src.portfolios.portfolios import portfolios
+    from src.support.support import support
 
     # Register the routes that we just imported so they can be properly handled
-    app.register_blueprint(views,       url_prefix='/classic')
-    app.register_blueprint(customers,   url_prefix='/classic')
-    app.register_blueprint(products,    url_prefix='/classic')
+    app.register_blueprint(clients, url_prefix='/cli')
+    app.register_blueprint(portfolios, url_prefix='/port')
+    app.register_blueprint(support, url_prefix= '/supp')
 
     return app

@@ -9,6 +9,12 @@ from src import create_app
 # create the app object
 app = create_app()
 
+
+@app.route("/")
+def hello_world():
+    return f'<h1>Hello From the Flask-MySQL Connection Tutorial</h1>'
+
+
 if __name__ == '__main__':
     # we want to run in debug mode (for hot reloading) 
     # this app will be bound to port 4000. 
